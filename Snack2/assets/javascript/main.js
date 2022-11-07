@@ -31,16 +31,27 @@ let targheStudenti = studenti.map((elemento) =>
 {
     return elemento.nome.toUpperCase();
 })
-
-//Array nomi maiuscolo
+//Stampa vettore nomi maiuscolo
 console.log(targheStudenti);
 
 
 
+//Estrapola studenti con voto superiore a 70
+let studentiBravi = studenti.filter((elemento) =>
+{
+    if(elemento.voto >= 70)return elemento;
+})
+//Stampa vettore studenti con voto superiore a 70
+console.log(studentiBravi);
 
 
 
-
-
+//Estrapola studenti con voto superiore a 70 e id superiore a 120
+let studentiBraviId120 = studenti.filter((elemento) =>
+{
+    if(elemento.voto >= 70 && elemento.id >= 120)return elemento;
+})
+//Stampa vettore studenti con voto superiore a 70
+console.log(studentiBraviId120);
 
 // ----- FINE :) -----
