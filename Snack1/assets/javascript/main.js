@@ -19,7 +19,7 @@ i nomi nell'array nuovo saranno i nomi compresi tra queste posizioni 2 e 4
 
 let vettoreNomi = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
 let nuovoVettoreNomi = [];
-let min = 2;
+let min = Math.floor(Math.random()*7);
 let max = 4;
 let app;
 
@@ -30,25 +30,44 @@ if(min>max)
     max = app;
 }
 
+console.log(min)
+console.log(max)
+
 console.log(vettoreNomi);
 // console.log(`-Minimo: ${min}`);
 // console.log(`-Massimo: ${max}`);
 
 
-vettoreNomi.forEach((elemento, index) =>
+//Versione forEach //////////////////////////////////////////////////////////////////////////////////
+// vettoreNomi.forEach((elemento, index) =>
+// {
+//     if(index >= min && index <= max)
+//     {
+//         console.log("if");
+//         nuovoVettoreNomi.push(elemento);
+//     }
+// })
+
+// console.log(nuovoVettoreNomi);
+
+
+//Versione filter //////////////////////////////////////////////////////////////////////////////////
+nuovoVettoreNomi = vettoreNomi.filter((elemento, index) =>
 {
     if(index >= min && index <= max)
     {
-        console.log("if");
-        nuovoVettoreNomi.push(elemento);
+        return true;
+    }
+    else
+    {
+        return false;
     }
 })
 
 
+console.log(nuovoVettoreNomi)
 
 
-
-console.log(nuovoVettoreNomi);
 
 
 
