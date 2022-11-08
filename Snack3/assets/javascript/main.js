@@ -14,6 +14,7 @@ Stampare a schermo la bici con peso minore utilizzando destructuring e template 
 */
 
 let appoggio = 100;
+let variabileTemporanea;
 
 let biciLeggera = 
 {
@@ -25,41 +26,46 @@ let biciLeggera =
 let bici = 
 [
     {
-        modello: 'testo1',
+        modello: 'BMX',
+        peso: 10
+    },
+    {
+        modello: 'BMXL',
         peso: 15
     },
     {
-        modello: 'testo2',
-        peso: 10
+        modello: 'XBML',
+        peso: 5
     },
     {
-        modello: 'testo3',
-        peso: 80
-    },
-    {
-        modello: 'testo4',
-        peso: 10
+        modello: 'LBXM',
+        peso: 20
     }
 ]
 
-// let {modello, peso} = bici;
+let {modello, peso} = bici;
 
-bici.forEach(({peso}, index) => 
+bici.forEach(({peso}, i) => 
 {
     if(appoggio > peso)
     {
         appoggio = peso;
-        biciLeggera = bici[index];
+        biciLeggera = bici[i];
     }
-    // i++;
 });
-
-
 
 // let {modello, peso} = bici;
 
 console.log(`Modello: ${biciLeggera.modello}`)
-console.log(`Peso: ${biciLeggera.peso}`)
+console.log(`Peso: ${biciLeggera.peso}kg`)
+
+
+
+
+
+
+
+
 
 
 
