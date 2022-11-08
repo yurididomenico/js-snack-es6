@@ -44,21 +44,24 @@ let squadre =
     
 ]
 
+//vettore squadre
 squadre.forEach((elemento)=>
 {
-    elemento.punti = Math.floor(Math.random()*20)+1;
-    elemento.falli = Math.floor(Math.random()*7)+1;
+    elemento.punti = parseInt(Math.floor(Math.random()*20)+1);
+    elemento.falli = parseInt(Math.floor(Math.random()*7)+1);
 })
 
+//Stampa vettore iniziale
 console.log(squadre)
 
-let nuovoArray = squadre.map(({nome, falli}) =>
+//vettore squadre senza punti
+let squadreFalli = squadre.map(({nome, falli}) =>
 {
     return {nome, falli};
 })
 
-
-console.log(nuovoArray)
+//Stampa vettore nuovo
+console.log(squadreFalli)
 
 
 
