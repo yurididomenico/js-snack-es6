@@ -19,7 +19,41 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 stampiamo tutto in console.
 */
 
+let squadre =
+[
+    {
+        nome: 'Kebabbari',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Pizzaioli',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Ristoratori',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Baristi',
+        punti: 0,
+        falli: 0
+    },
+    
+]
 
+console.log(squadre)
+
+squadre.forEach((elemento)=>
+{
+    let punti = Math.floor(Math.random()*20)+1;
+    let falli = Math.floor(Math.random()*7)+1;
+
+    elemento.punti = punti;
+    elemento.falli = falli;
+})
 
 
 
