@@ -35,15 +35,13 @@ let bici =
     },
     {
         modello: 'XBML',
-        peso: 5
+        peso: 15
     },
     {
         modello: 'LBXM',
         peso: 20
     }
 ]
-
-let {modello, peso} = bici;
 
 bici.forEach(({peso}, i) => 
 {
