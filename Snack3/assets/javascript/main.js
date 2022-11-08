@@ -13,8 +13,13 @@ Stampare a schermo la bici con peso minore utilizzando destructuring e template 
 
 */
 
-let biciLeggera;
-let appoggio;
+let appoggio = 100;
+
+let biciLeggera = 
+{
+    modello: "",
+    peso: 0
+}
 
 //Vettore di oggetti
 let bici = 
@@ -29,20 +34,32 @@ let bici =
     },
     {
         modello: 'testo3',
-        peso: 20
+        peso: 80
+    },
+    {
+        modello: 'testo4',
+        peso: 10
     }
 ]
 
+// let {modello, peso} = bici;
 
-
-
-    
+bici.forEach(({peso}, index) => 
+{
+    if(appoggio > peso)
+    {
+        appoggio = peso;
+        biciLeggera = bici[index];
+    }
+    // i++;
+});
 
 
 
 // let {modello, peso} = bici;
 
-// console.log(bici)
+console.log(`Modello: ${biciLeggera.modello}`)
+console.log(`Peso: ${biciLeggera.peso}`)
 
 
 
@@ -74,6 +91,11 @@ let bici =
 
 
 
+
+
+// console.log(biciLeggera)
+
+   
 
 
 
