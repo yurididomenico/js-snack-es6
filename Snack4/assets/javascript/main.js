@@ -44,24 +44,21 @@ let squadre =
     
 ]
 
-console.log(squadre)
-
 squadre.forEach((elemento)=>
 {
-    let punti = Math.floor(Math.random()*20)+1;
-    let falli = Math.floor(Math.random()*7)+1;
+    elemento.punti = Math.floor(Math.random()*20)+1;
+    elemento.falli = Math.floor(Math.random()*7)+1;
+})
 
-    elemento.punti = punti;
-    elemento.falli = falli;
+console.log(squadre)
+
+let nuovoArray = squadre.map(({nome, falli}) =>
+{
+    return {nome, falli};
 })
 
 
-
-
-
-
-
-
+console.log(nuovoArray)
 
 
 
